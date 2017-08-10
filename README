@@ -1,0 +1,47 @@
+IncaRNAtion
+
+Launch the script /src/IncaRNAtion.py, the options are below.
+The library MPMATH is highly recommanded for long sequences:https://github.com/fredrik-johansson/mpmath/
+
+The script /src/incarnation_3.py is a python3 version of the IncaRNAtion software.
+
+  Required:
+    -d <file_path> 
+      A file containing the target secondary structure and an optional MSA
+    -a <float> 
+      The value of alpha, between 0 and 1.
+      1 takes only into account the secondary structure, 0 only the MSA
+
+  Optional:
+    -m <int> 
+      The max penality for an invalid base pair, -1 for infinity
+    -b <int> 
+      print 'n' stochasticly backtracked sequences
+    -no_profile <> 
+      Doesn't output a profile
+    -s_gc <target_gc> <nb_samples> 
+      Sampling sequences with a 0<=target_gc<=1 and a given
+      number of samples 
+    -gc_sec_struct <>
+      Only the nucleotides with an interaction in the secondary structure
+      will be considered for the GC content
+    -gc_max_err <float>
+      Max error from GC target allowed in sample, default 0.1
+    -gc_data <file_name>
+      Create a file with the given name, will print to it a first line
+      the weight of 'C' and on the next the list of sampled GC content
+    -t <float>
+      The temperature (default 310.5K)
+    -c <IUPAC sequence>
+      An IUPAC sequence to constrain the outputed sequences
+    -p <file_path> 
+      A data file with  starting RNA profile (i.e. every lines contains
+       nucleotides probability in order: 'ACGU')
+
+  e.g.
+    python IncaRNAtion -d data.txt -a 0.5 -m 20
+    python IncaRNAtion -d data.txt -a 1 -m 20 -no_profile -s_gc 0.5 100
+    python IncaRNAtion -d data.txt -a 0.5 -m 20 -b 5 -no_profile
+    """
+
+
