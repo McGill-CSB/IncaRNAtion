@@ -39,9 +39,9 @@ The script /src/incarnation_3.py is a python3 version of the IncaRNAtion softwar
        nucleotides probability in order: 'ACGU')
 
   e.g.
-    python IncaRNAtion -d data.txt -a 0.5 -m 20
-    python IncaRNAtion -d data.txt -a 1 -m 20 -no_profile -s_gc 0.5 100
-    python IncaRNAtion -d data.txt -a 0.5 -m 20 -b 5 -no_profile
+    python IncaRNAtion.py -d data.txt -a 0.5 -m 20
+    python IncaRNAtion.py -d data.txt -a 1 -m 20 -no_profile -s_gc 0.5 100
+    python IncaRNAtion.py -d data.txt -a 0.5 -m 20 -b 5 -no_profile
     """
 
 
